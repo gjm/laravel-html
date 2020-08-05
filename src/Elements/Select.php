@@ -76,7 +76,7 @@ class Select extends BaseElement
      */
     public function optgroup($label, $options)
     {
-        return Optgroup::create()
+        $optgroup = Optgroup::create()
             ->label($label)
             ->addChildren($options, function ($text, $value) {
                 return Option::create()
